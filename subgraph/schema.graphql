@@ -1,0 +1,47 @@
+type Campaign @entity {
+  id: ID!
+  creator: Bytes!
+  title: String!
+  description: String!
+  targetAmount: BigInt!
+  raisedAmount: BigInt!
+  deadline: BigInt!
+  imageHash: String!
+  verified: Boolean!
+  completed: Boolean!
+  donations: [Donation!] @derivedFrom(field: "campaign")
+  milestones: [Milestone!] @derivedFrom(field: "campaign")
+}
+
+type Donation @entity {
+  id: ID!
+  donor: Bytes!
+  amount: BigInt!
+  timestamp: BigInt!
+  campaign: Campaign!
+}
+
+type Milestone @entity {
+  id: ID!
+  description: String!
+  targetAmount: BigInt!
+  reached: Boolean!
+  campaign: Campaign!
+}
+
+type Donor @entity {
+  id: ID!
+  address: Bytes!
+  totalDonated: BigInt!
+  donations: [Donation!] @derivedFrom(field: "donor")
+  nfts: [NFT!] @derivedFrom(field: "owner")
+}
+
+type NFT @entity {
+  id: ID!
+  tokenId: BigInt!
+  owner: Donor!
+  campaign: Campaign!
+  donationAmount: BigInt!
+  mintDate: BigInt!
+}
