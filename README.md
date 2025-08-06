@@ -1,4 +1,40 @@
+# 🎗️ Blockchain Charity App
 
+A decentralized crowdfunding platform empowering verified charities to launch campaigns, receive secure crypto donations, and reward donors using NFTs and ERC-20 tokens. Built with Ethereum smart contracts, IPFS, and The Graph for complete transparency and traceability.
+
+---
+
+## 🚀 Features
+
+- 🏛️ Launch and manage verified charity campaigns
+- 🤝 Accept donations in crypto (ERC-20)
+- 🧧 Reward donors with NFTs
+- 🧠 Track campaign milestones
+- 🔎 Query campaign and donation data via The Graph
+- 👨‍💻 Admin dashboard to verify campaigns and detect fraud
+
+---
+
+## 📁 Project Structure
+
+blockchain-charity-app/
+├── contracts/ # Solidity smart contracts
+│ ├── CharityPlatform.sol
+│ ├── CharityNFT.sol
+│ ├── DonationToken.sol
+│ └── interfaces/
+├── frontend/ # React + Next.js + Tailwind frontend
+│ ├── components/
+│ ├── pages/
+│ ├── styles/
+│ └── utils/
+├── subgraph/ # The Graph indexing config
+│ ├── schema.graphql
+│ └── subgraph.yaml
+├── scripts/ # Deployment scripts
+├── hardhat.config.js # Hardhat setup
+├── package.json
+└── README.md
 ---
 
 ## 🧠 Smart Contract Overview
