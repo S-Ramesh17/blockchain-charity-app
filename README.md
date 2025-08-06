@@ -15,28 +15,6 @@ A decentralized crowdfunding platform empowering verified charities to launch ca
 
 ---
 
-## 📁 Project Structure
-
-blockchain-charity-app/
-├── contracts/ # Solidity smart contracts
-│ ├── CharityPlatform.sol
-│ ├── CharityNFT.sol
-│ ├── DonationToken.sol
-│ └── interfaces/
-├── frontend/ # React + Next.js + Tailwind frontend
-│ ├── components/
-│ ├── pages/
-│ ├── styles/
-│ └── utils/
-├── subgraph/ # The Graph indexing config
-│ ├── schema.graphql
-│ └── subgraph.yaml
-├── scripts/ # Deployment scripts
-├── hardhat.config.js # Hardhat setup
-├── package.json
-└── README.md
----
-
 ## 🧠 Smart Contract Overview
 
 | Contract             | Purpose                                    |
