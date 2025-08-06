@@ -1,0 +1,44 @@
+/* In your globals.css */
+:root {
+  /* Background layers for light mode */
+  --bg-light: 
+    linear-gradient(to bottom, transparent, rgba(255,255,255,0.9)),
+    url('/images/charity-bg-pattern-light.svg'),
+    #f8fafc;
+  
+  /* Background layers for dark mode */
+  --bg-dark:
+    linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)),
+    url('/images/charity-bg-pattern-dark.svg'),
+    #1a202c;
+}
+
+body {
+  background: var(--bg-light);
+  background-size: 
+    100% 100%,     /* For gradient */
+    30px 30px,     /* For pattern */
+    auto;          /* For color */
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg-dark);
+  }
+}
+
+/* Special campaign card backgrounds */
+.campaign-card-bg {
+  background:
+    linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%),
+    url('/images/card-texture.png'),
+    white;
+}
+
+/* Hero section with layered background */
+.hero-section {
+  background:
+    linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(16, 185, 129, 0.9)),
+    url('/images/hero-bg.jpg') center/cover,
+    #2563EB; /* Fallback if image fails to load */
+}
